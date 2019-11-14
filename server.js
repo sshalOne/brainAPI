@@ -28,4 +28,4 @@ app.get('/profile/:id', (req,res) => {profile.handleProfileGet(req,res,db)});
 app.put('/image', (req,res) => {image.handleImage(req,res,db)});
 app.post('/imageUrl', (req,res) => {image.handleApiCall(req,res)});
 
-app.listen(3300, () => {console.log('The server is listening on port 3300')});
+app.listen(process.env.PORT || 3300, () => {console.log(`The server is listening on port ${process.env.PORT}`)});
